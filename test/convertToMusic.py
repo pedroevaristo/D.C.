@@ -1,15 +1,17 @@
 #https://github.com/deepankarvarma/MP4-to-MP3-converter-using-Python/blob/master/app.py
 #https://dev.to/stokry/download-youtube-video-to-mp3-with-python-26p
+
+#https://www.youtube.com/watch?v=SrnWp5O0DEs&pp=ygUMbm8gbW9yZSBqYWNr
 import pytube
-import moviepy.editor
+from moviepy.editor import VideoFileClip
 import sys
 
 def case1(linkYT):
     
     try:
         print("Convertendo...")
-        converter = moviepy.VideoFileClip(linkYT)# resolver o problema aqui e colocar direcionamento para a pasta que eu quero que baixe
-        
+        converter_Audio = VideoFileClip(linkYT)# resolver o problema aqui e colocar direcionamento para a pasta que eu quero que baixe
+        converter_Audio.audio.write_audiofile()
         print("\nBaixado!")
 
     except:
