@@ -1,0 +1,24 @@
+https://github.com/atokic/Python-Youtube-Downloader-and-Converter/blob/master/main.py
+
+https://github.com/atokic/Python-Youtube-Downloader-and-Converter/blob/master/file_converter.py
+
+https://github.com/LestlinRobins/Youtube-to-MP3-converter/blob/main/ytmp3convert.py
+
+https://www.geeksforgeeks.org/download-video-in-mp3-format-using-pytube/
+
+https://harshananayakkara.medium.com/download-audio-from-youtube-convert-mp4-to-mp3-python-pytube-ffmpeg-6163498c051f
+
+https://github.com/deepankarvarma/MP4-to-MP3-converter-using-Python/blob/master/app.py
+
+https://www.linkedin.com/pulse/explorando-aplicativos-de-download-v%C3%ADdeos-do-youtube-usando-antonio/?originalSubdomain=pt
+
+----------------------------------------------------------------implementar funcionalidade de resolução
+
+https://stackoverflow.com/questions/65255275/pytube-set-resolution
+
+https://pytube.io/en/latest/user/streams.html#downloading-streams
+
+https://pytube3.readthedocs.io/en/latest/user/quickstart.html
+
+https://stackoverflow.com/questions/68233716/how-to-extract-elements-from-pytube-stream
+
