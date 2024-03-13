@@ -12,6 +12,9 @@ https://github.com/deepankarvarma/MP4-to-MP3-converter-using-Python/blob/master/
 
 https://www.linkedin.com/pulse/explorando-aplicativos-de-download-v%C3%ADdeos-do-youtube-usando-antonio/?originalSubdomain=pt
 
+
+# vídeo https://www.youtube.com/watch?v=Uf4rxCB4lys&pp=ygUOam9obnkgYmUgZ29vZGU%3D
+
 ----------------------------------------------------------------implementar funcionalidade de resolução
 
 https://stackoverflow.com/questions/65255275/pytube-set-resolution
@@ -21,4 +24,8 @@ https://pytube.io/en/latest/user/streams.html#downloading-streams
 https://pytube3.readthedocs.io/en/latest/user/quickstart.html
 
 https://stackoverflow.com/questions/68233716/how-to-extract-elements-from-pytube-stream
+
+
+
+https://gemini.google.com/app/93c07443a7f2a194?hl=pt-BR
 
