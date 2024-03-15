@@ -1,5 +1,5 @@
-import youtube_dl as yt
-from pytube
+#import youtube_dl as yt_dl https://nextdl.readthedocs.io/en/latest/module_guide.html#extracting-video-information
+from pytube import YouTube
 
 opcoes = ["itag=22 type=video/mp4 res=720p fps=30fps",
 "itag=43 type=video/webm res=360p fps=30fps", 
@@ -13,7 +13,9 @@ opcoes = ["itag=22 type=video/mp4 res=720p fps=30fps",
 "itag=133 type=video/mp4 res=240p fps=30fps", 
 "itag=160 type=video/mp4 res=144p fps=30fps"]
 
-def download_link(pego_link):
+def download_link(link, directorio):
+
+    url_pego = YouTube(link)
     global opcoes
     opcoes_dic = {}
     for linha in opcoes:
@@ -30,18 +32,18 @@ def download_link(pego_link):
         print(f"{itag} - {res} - {type}")
         
     escolha_itag = input("Digite o itag:")
-
+    # print("não apareceu a opção")
     try:
-        url_video = yt.(escolha_itag)#problema em pegar o itag não se se sabe se é devido a versão do python ou da api ou outro motivo
+        #url_video =  (itag=escolha_itag)
+        #problema em pegar o itag não se se sabe se é devido a versão do python ou da api ou outro motivo
 
-        video = yt.download_video(url_video)
+        stream = url_pego.streams.get_by_itag(escolha_itag)
+        video = stream.download(output_path=directorio)
             
         print(f"baixado com sucesso: {video}")
     except Exception as e:
         print(f"erro ao baixar o vídeo {e}")
-                
-            #finally:
 
-   # print("não apareceu a opção")
+
 
         
