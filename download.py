@@ -13,7 +13,7 @@ opcoes = ["itag=22 type=video/mp4 res=720p fps=30fps",
 "itag=133 type=video/mp4 res=240p fps=30fps", 
 "itag=160 type=video/mp4 res=144p fps=30fps"]
 
-def download_link(link, directorio):
+def download_link(link, diretorio):
 
     url_pego = YouTube(link)
     global opcoes
@@ -38,7 +38,7 @@ def download_link(link, directorio):
         #problema em pegar o itag não se se sabe se é devido a versão do python ou da api ou outro motivo
 
         stream = url_pego.streams.get_by_itag(escolha_itag)
-        video = stream.download(output_path=directorio)
+        video = stream.download(output_path=diretorio)
             
         print(f"baixado com sucesso: {video}")
     except Exception as e:
