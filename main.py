@@ -20,7 +20,7 @@ def consulta(link, diretorio):
                 
                 download_link(link, diretorio)
                
-            case 2:
+            case "2":
                 convert_link(link, diretorio)
 
     else:
