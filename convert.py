@@ -1,31 +1,40 @@
 from pytube import YouTube as yt
 
 
-opcoes =["itag=140 mime_type=audio/mp4 abr=128kbps acodec=mp4a.40.2 progressive=False type=audio",
- "itag=249 mime_type=audio/webm abr=50kbps acodec=opus progressive=False type=audio",
- "itag=250 mime_type=audio/webm abr=70kbps acodec=opus progressive=False type=audio",
- "itag=251 mime_type=audio/webm abr=160kbps acodec=opus progressive=False type=audio"]
+opcoes =["itag=140 mime_type=audio/mp4 abr=128kbps type=audio",
+ "itag=249 mime_type=audio/webm abr=50kbps type=audio",
+ "itag=250 mime_type=audio/webm abr=70kbps type=audio",
+ "itag=251 mime_type=audio/webm abr=160kbps type=audio"]
 
 def convert_link(link, diretorio):
     url_obtido = yt(link)
-    
-    escolha_itag = input(f"Escolha entre as opcoes:\n{opcoes}")
-    #está saindo com tudo dentro do opcoes
+    global opcoes
+    opcoes_dic = {}
+
+    for linha in opcoes:
+      itag, mime_type, abr, type = linha.split(" ")
+
+      opcoes_dic[itag] = {
+        "mime_type":mime_type,
+        "abr": abr,
+        "type":type
+      }
+    for itag, opcoes in opcoes_dic.items():#itag representa a chave do dic, enquanto opcoes os valores das chaves
+      mime_type = opcoes["mime_type"]
+      type = opcoes["type"]
+      abr = opcoes["abr"]
+
+      print(f"{itag} : : {mime_type} : {type} : {abr}\n")
+  
+    escolha_itag = input("escolha o itag, acima: ")
     try:
       stream = url_obtido.streams.get_by_itag(escolha_itag)
+
       audio = stream.download(output_path=diretorio)
-        if audio
+
+      if not audio == "":
+        print(f"Baixado o audio:\n\n {audio}")
+         
     except Exception as e:
        print(f"Erro ao baixar o conteúdo em aúdio. {e}")
-    
-    
-
-
-
-(  """
-  itag=140 type=audio/mp4 abr=128kbps 
- itag=171 type=audio/webm abr=128kbps 
-
- para converter e baixar nessa qualidade de audio
- """ 
-)
+  

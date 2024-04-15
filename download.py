@@ -18,8 +18,8 @@ def download_link(link, diretorio):
     url_pego = YouTube(link)
     global opcoes
     opcoes_dic = {}
+
     for linha in opcoes:
-        #tendo problemas em pegar as informações mas só pega uma possívemente o itag
         itag, type, res, fps = linha.split(" ")
 
         opcoes_dic[itag] = {
@@ -32,11 +32,8 @@ def download_link(link, diretorio):
         print(f"{itag} - {res} - {type}")
         
     escolha_itag = input("Digite o itag:")
-    # print("não apareceu a opção")
+    
     try:
-        #url_video =  (itag=escolha_itag)
-        #problema em pegar o itag não se se sabe se é devido a versão do python ou da api ou outro motivo
-
         stream = url_pego.streams.get_by_itag(escolha_itag)
         video = stream.download(output_path=diretorio)
             
